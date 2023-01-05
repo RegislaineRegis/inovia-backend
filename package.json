@@ -1,0 +1,29 @@
+{
+  "name": "backend-inovia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RegislaineRegis/backend-inovia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RegislaineRegis/backend-inovia/issues"
+  },
+  "homepage": "https://github.com/RegislaineRegis/backend-inovia#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "postgres": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20"
+  }
+}
