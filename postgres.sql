@@ -34,4 +34,4 @@ CREATE TABLE "sale_product" (
 );
 
 INSERT INTO "user" ("id","email", "password") VALUES
-  (1,'teste@email.com', '1c37466c159755ce1fa181bd247cb925'); 
+  (1,'teste@email.com', 'e54d5c51ebe45aa893e392e616a0c466'); /*  senha: User123*  */
