@@ -1,0 +1,12 @@
+{
+  //quando salvar, formata
+  "editor.formatOnSave": true,
+  //força indentar com 2 espaços
+  "editor.detectIndentation": false,
+  // indenta com 2 espaços
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    //força o eslint a formatar sempre
+    "source.fixAll.eslint": true 
+  }
+}

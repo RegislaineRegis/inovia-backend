@@ -1,0 +1,32 @@
+version: '3'
+
+networks:
+  inovia:
+    name: inovia
+
+services:
+  postgres:
+    image: postgres
+    hostname: postgres
+    container_name: postgres
+    ports: [ '5432:5432' ]
+    networks: [ 'inovia' ]
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: inovia
+    volumes: [ './postgres.sql:/docker-entrypoint-initdb.d/postgres.sql' ]
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+  mongo:
+    image: mongo:3.1
+    hostname: mongo
+    container_name: mongo
+    ports: [ '27017:27017' ]
+    networks: [ 'inovia' ]
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
