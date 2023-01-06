@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compose": "docker-compose down --remove-orphans && docker-compose up --build --force-recreate",
+    "compose:d": "npm run compose -- -d",
     "lint": "eslint '*/**/*.{js,ts}' --fix",
     "build": "webpack build",
     "prepare": "husky install",
