@@ -4,12 +4,12 @@
   "description": "Desafio Full Stack",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
+    "build": "webpack build",
     "compose": "docker-compose down --remove-orphans && docker-compose up --build --force-recreate",
     "compose:d": "npm run compose -- -d",
     "lint": "eslint '*/**/*.{js,ts}' --fix",
-    "build": "webpack build",
     "dev": "nodemon --watch src --ext ts --exec \"ts-node src\"",
-    "prepare": "husky install",
     "test:verbose": "jest --passWithNoTests --runInBand --detectOpenHandles --verbose",
     "test": "jest --passWithNoTests --runInBand --detectOpenHandles --silent --noStackTrace",
     "test:watch": "npm run test -- --watch",
@@ -24,16 +24,21 @@
     "type": "git",
     "url": "git+https://github.com/RegislaineRegis/backend-inovia.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "inovia"
+  ],
+  "author": "Regislaine",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RegislaineRegis/backend-inovia/issues"
   },
   "homepage": "https://github.com/RegislaineRegis/backend-inovia#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "postgres": "^3.3.3"
+    "postgres": "^3.3.3",
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",
