@@ -1,13 +1,14 @@
 {
   "name": "backend-inovia",
   "version": "1.0.0",
-  "description": "",
+  "description": "Desafio Full Stack",
   "main": "index.js",
   "scripts": {
     "compose": "docker-compose down --remove-orphans && docker-compose up --build --force-recreate",
     "compose:d": "npm run compose -- -d",
     "lint": "eslint '*/**/*.{js,ts}' --fix",
     "build": "webpack build",
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node src\"",
     "prepare": "husky install",
     "test:verbose": "jest --passWithNoTests --runInBand --detectOpenHandles --verbose",
     "test": "jest --passWithNoTests --runInBand --detectOpenHandles --silent --noStackTrace",
