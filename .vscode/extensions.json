@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "rvest.vs-code-prettier-eslint",
-    "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "firsttris.vscode-jest-runner",
     "vscode-icons-team.vscode-icons",
