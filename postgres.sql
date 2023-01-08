@@ -35,3 +35,8 @@ CREATE TABLE "sale_product" (
 
 INSERT INTO "user" ("id","email", "password") VALUES
   (1,'teste@email.com','$2b$10$o7h8OAIkQTE7XC82M.xX4OqWhCp9mPK8vPneTCyu53QHMyWSR81Gm'); /*  senha: User123*  */
+
+INSERT INTO "customer" ("id", "user_id", "name", "address", "phone", "email", "birthDate", "profilePhoto") VALUES (
+  '2', NULL, 'Ana Ferreira ','R: Jose Augusto, 123 São Paulo -SP Brazil', '11 99865-5632', 'anaferreira@gmail.com', '1984-11-23',
+  'gerarumafoto.jpeg'
+);
