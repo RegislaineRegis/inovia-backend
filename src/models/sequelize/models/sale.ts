@@ -8,26 +8,27 @@ const schema: ModelAttributes = {
     autoIncrement: true,
     allowNull: false
   },
-  email: {
-    type: DataTypes.STRING(120),
+  customer_id: {
+    type: DataTypes.BIGINT,
     allowNull: false
   },
-  password: {
-    type: DataTypes.TEXT,
+  status: {
+    type: DataTypes.STRING(10),
     allowNull: false
   }
 };
 
 const options: ModelOptions = {
   timestamps: false,
-  tableName: 'user'
+  tableName: 'sale'
 };
 
-const associate: SequelizeModel['associate'] = (models, user): void => {
-  user.belongsTo(models.customer, { foreignKey: 'id', targetKey: 'user_id' });
+const associate: SequelizeModel['associate'] = (models, sale): void => {
+  sale.hasOne(models.customer, { sourceKey: 'customer_id', foreignKey: 'id' });
+  sale.hasMany(models.sale_product, { sourceKey: 'id', foreignKey: 'sale_id' });
 };
 
-export const makeUser = (sequelize: Sequelize): SequelizeModel => {
+export const makeSale = (sequelize: Sequelize): SequelizeModel => {
   const model = sequelize.define(options.tableName, schema, options) as SequelizeModel;
   model.associate = associate;
   return model;
