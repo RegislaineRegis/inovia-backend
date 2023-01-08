@@ -6,7 +6,7 @@ CREATE TABLE "user" (
 
 CREATE TABLE "customer" (
   "id" BIGSERIAL NOT NULL PRIMARY KEY,
-  "user_id" BIGINT NOT NULL REFERENCES "user" ("id"),
+  "user_id" BIGINT REFERENCES "user" ("id"),
   "name" VARCHAR(120) NOT NULL,
   "address" VARCHAR(200) NOT NULL,
   "phone" VARCHAR(30) NOT NULL,
@@ -37,6 +37,11 @@ INSERT INTO "user" ("id","email", "password") VALUES
   (1,'teste@email.com','$2b$10$o7h8OAIkQTE7XC82M.xX4OqWhCp9mPK8vPneTCyu53QHMyWSR81Gm'); /*  senha: User123*  */
 
 INSERT INTO "customer" ("id", "user_id", "name", "address", "phone", "email", "birthDate", "profilePhoto") VALUES (
-  '2', NULL, 'Ana Ferreira ','R: Jose Augusto, 123 São Paulo -SP Brazil', '11 99865-5632', 'anaferreira@gmail.com', '1984-11-23',
+  1, 1 , 'Teste Inovia ','R: Elias Gebara, 210 Campinas -SP Brazil', '11 99211-5122', 'teste@gmail.com', '1980-08-03',
+  'testeinovia.jpeg'
+);
+
+INSERT INTO "customer" ("id", "user_id", "name", "address", "phone", "email", "birthDate", "profilePhoto") VALUES (
+  2, NULL, 'Ana Ferreira ','R: Jose Augusto, 123 São Paulo -SP Brazil', '11 99865-5632', 'anaferreira@gmail.com', '1984-11-23',
   'gerarumafoto.jpeg'
 );
