@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-01-09T20:49:47.323Z",
-    "modified": "2023-01-10T19:50:21.119Z",
+    "modified": "2023-01-10T20:03:39.219Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"teste@email.com\",\n  \"password\": \"User123*\"\n}",
+      "raw": "{\n  \"email\": \"teste@email.com\",\n  \"password\": \"User12\"\n}",
       "form": []
     },
     "tests": []
