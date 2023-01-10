@@ -46,13 +46,13 @@ const options: ModelOptions = {
   timestamps: false,
   tableName: 'sale_product'
 };
-
+/*
 const associate: SequelizeModel['associate'] = (models, sale_product): void => {
   sale_product.belongsTo(models.sale, { foreignKey: 'sale_id', targetKey: 'id' });
 };
-
+*/
 export const makeSaleProduct = (sequelize: Sequelize): SequelizeModel => {
   const model = sequelize.define(options.tableName, schema, options) as SequelizeModel;
-  model.associate = associate;
+  // model.associate = associate;
   return model;
 };

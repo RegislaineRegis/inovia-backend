@@ -23,14 +23,14 @@ const options: ModelOptions = {
   tableName: 'user'
 };
 
-
+/*
 const associate: SequelizeModel['associate'] = (models, user): void => {
   user.belongsTo(models.customer, { foreignKey: 'id', targetKey: 'user_id' });
 };
-
+*/
 
 export const makeUser = (sequelize: Sequelize): SequelizeModel => {
   const model = sequelize.define(options.tableName, schema, options) as SequelizeModel;
-  model.associate = associate;
+  // model.associate = associate;
   return model;
 };
