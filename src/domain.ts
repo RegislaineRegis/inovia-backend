@@ -1,12 +1,13 @@
 export namespace Login {
-  export type LoginInput = {
+  export type Input = {
     email: string,
     password: string,
   };
-  export type LoginOut = {
+  export type Output = {
     id: number,
     email: string,
-    toke: string,
+    accessToken: string,
+    refreshToken: string,
   };
 }
 export type User = {
