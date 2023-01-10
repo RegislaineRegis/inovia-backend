@@ -25,6 +25,7 @@
     "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/consistent-type-assertions": "warn",
     // javascript
     "semi": ["error", "always"],
     "max-len": [
