@@ -6,7 +6,7 @@ export const authController = {
   async postLogin(body: any): Promise<Login.Input> {
     const data = await authValidators.loginSchema.validateAsync(body);
     const user = await userService.getByEmail(data.email);
-    const verifyPass = await userService.checkPassword(data.password, user.password);
+    const verifyPass = await authValidators.checkPassword(data.password, user.password);
     return verifyPass;
   }
 };
