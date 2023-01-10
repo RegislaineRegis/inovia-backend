@@ -42,14 +42,14 @@ const options: ModelOptions = {
   timestamps: false,
   tableName: 'customer'
 };
-/*
+
 const associate: SequelizeModel['associate'] = (models, customer): void => {
   customer.hasOne(models.user, { sourceKey: 'user_id', foreignKey: 'id' });
   customer.hasMany(models.sale, { sourceKey: 'id', foreignKey: 'customer_id' });
 };
-*/
+
 export const makeCustomer = (sequelize: Sequelize): SequelizeModel => {
   const model = sequelize.define(options.tableName, schema, options) as SequelizeModel;
-  // model.associate = associate;
+  model.associate = associate;
   return model;
 };
