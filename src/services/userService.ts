@@ -8,7 +8,7 @@ export const userService = {
       { where: { email }, raw: true }
     );
     if (!userByEmail) {
-      const error = new Error('Email de usuário não encontrado');
+      const error = new Error('Email Inválido, usuário não encontrado');
       error.name = 'ValidationError';
       throw error;
     }
