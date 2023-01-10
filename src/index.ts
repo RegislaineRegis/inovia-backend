@@ -1,9 +1,7 @@
 import app from './app';
 import vars from '$/vars';
-import { Sequelize } from 'sequelize';
+import sequelize from './models/sequelize';
 
-
-const sequelize = new Sequelize();
 
 sequelize.authenticate()
   .then(() => app.listen(vars.port, () => {
