@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import apiRoutes from './api';
+import { apiRoutes } from './api';
 
 const routes = Router();
 
 routes.use('/api', apiRoutes);
 
-routes.get('/health', (_req, res) => {
+routes.get('/login', (_req, res) => {
   res.sendStatus(200);
 });
 

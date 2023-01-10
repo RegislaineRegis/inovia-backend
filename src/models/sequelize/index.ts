@@ -1,11 +1,14 @@
-import vars from '$/vars';
+import { makeCustomer, makeSale, makeSaleProduct, makeUser } from './models/';
 import { Sequelize } from 'sequelize';
-import { makeUser } from './models';
+import vars from '$/vars';
 
 const sequelize = new Sequelize(vars.postgres);
 
-export const models = {
-  user: makeUser(sequelize)
+const models = {
+  user: makeUser(sequelize),
+  customer: makeCustomer(sequelize),
+  sale: makeSale(sequelize),
+  saleProduct: makeSaleProduct(sequelize)
 };
 
 Object

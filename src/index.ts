@@ -1,6 +1,16 @@
 import app from './app';
-const port = 3001;
+import vars from '$/vars';
+import { Sequelize } from 'sequelize';
 
-app.listen(port, () => {
-  console.log('deu muito bom!!!');
-});
+
+const sequelize = new Sequelize();
+
+sequelize.authenticate()
+  .then(() => app.listen(vars.port, () => {
+    console.log(`running on port ${vars.port}`);
+  }))
+  .catch(({ message, ...err }: Error) => {
+    console.log(message, err);
+    process.exit(1);
+  });
+
