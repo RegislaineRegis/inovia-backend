@@ -51,7 +51,7 @@ const associate: SequelizeModel['associate'] = (models, sale_product): void => {
   sale_product.belongsTo(models.sale, { foreignKey: 'sale_id', targetKey: 'id' });
 };
 
-export const makeCustomer = (sequelize: Sequelize): SequelizeModel => {
+export const makeSaleProduct = (sequelize: Sequelize): SequelizeModel => {
   const model = sequelize.define(options.tableName, schema, options) as SequelizeModel;
   model.associate = associate;
   return model;
