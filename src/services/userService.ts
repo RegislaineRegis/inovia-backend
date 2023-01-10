@@ -1,8 +1,10 @@
 import { User } from '$/domain';
+import { models } from '$/models/sequelize';
+
 
 export const userService = {
   async getByEmail(email: string): Promise<User> {
-    const userByEmail = await SequelizeModel.findOne(
+    const userByEmail = await models.user.findOne(
       { where: { email }, raw: true }
     );
     if (!userByEmail) {

@@ -4,7 +4,7 @@ import vars from '$/vars';
 
 const sequelize = new Sequelize(vars.postgres);
 
-const models = {
+export const models = {
   user: makeUser(sequelize),
   customer: makeCustomer(sequelize),
   sale: makeSale(sequelize),
