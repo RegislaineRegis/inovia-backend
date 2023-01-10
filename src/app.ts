@@ -1,7 +1,7 @@
 import express from 'express';
 import 'express-async-errors';
-import routes from './routes';
-import { errorHandler, cors } from './middlewares';
+import { cors, errorHandler } from './middlewares';
+import { apiRoutes } from './routes/api';
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors);
 
-app.use(routes);
+app.use(apiRoutes);
 
 app.use(errorHandler);
 
