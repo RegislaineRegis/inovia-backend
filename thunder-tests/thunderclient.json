@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "58432455-2ac2-4d67-a514-3faa0fbb7c50",
+    "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
+    "containerId": "999c78e4-eeb0-42ce-9597-083a8b9b4bd5",
+    "name": "authRoutes",
+    "url": "localhost:3001/auth",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-01-09T20:49:47.323Z",
+    "modified": "2023-01-09T23:46:12.735Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"teste@email.com\",\n  \"password\": \"User123*\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
