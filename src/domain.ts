@@ -9,9 +9,16 @@ export namespace Login {
     accessToken: string,
     refreshToken: string,
   };
+  export type Token = {
+    accessToken: string,
+    refreshToken: string,
+    tokenType: string,
+    expiresIn: number,
+  };
 }
 export type User = {
   id: number,
   email: string,
   password: string,
 };
+
