@@ -6,7 +6,7 @@ passando pela criação da API de comunicação, interface web de interação.
 # **Técnologias usadas**
 
 Back-end:
-> Desenvolvido usando: **NODE.JS**, **POSTGRESQL**, **DOCKER**, **MONGODB**, **EXPRESS**, **TYPESCRIPT**, **GIT**, **JAVASCRIPT**;
+> Desenvolvido usando: **NODE.JS**, **POSTGRESQL**, **DOCKER**, **MONGODB**, **EXPRESS**, **TYPESCRIPT**, **GIT**, **JAVASCRIPT**, **CORS**, **JWT**, **BCRYPT**;
 
 
 ## Identified use-cases (CSU)
