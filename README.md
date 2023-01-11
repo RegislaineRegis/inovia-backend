@@ -46,4 +46,8 @@ Back-end:
       `Requisitos`
     
     - [x] [1. Os usuários devem se autenticar utilizando JWT e devem permanecer conectados por no máximo 15 minutos. Após esse tempo, o usuário precisa renovar o login ou perderá acesso ao sistema](#1-Os-usuários-devem-se-autenticar-utilizando-JWT-e-devem-permanecer-conectados-por-no-máximo-15-minutos-Após-esse-tempo-o-usuário-precisa-renovar-o-login-ou-perderá-acesso-ao-sistema)
+    - [x] [2. A base de clientes e a base de pedidos devem estar em um banco de dados PostgreSQL.](#2-A-base-de-clientes-e-a-base-de-pedidos-devem-estar-em-um-banco-de-dados-PostgreSQL)
+    - [ ] [3. A base de dados de produtos deve estar em um banco de dados MongoDB;.](#3-A-base-de-dados-de-produtos-deve-estar-em-um-banco-de-dados-MongoDB)
+
+
     
