@@ -1,6 +1,6 @@
 import { User } from '$/domain';
+import { NotFoundError } from '$/middlewares/errors';
 import { models } from '$/models/sequelize';
-
 
 export const userService = {
   async getByEmail(email: string): Promise<User> {
@@ -8,9 +8,7 @@ export const userService = {
       { where: { email }, raw: true }
     );
     if (!userByEmail) {
-      const error = new Error('Email Inválido, usuário não encontrado');
-      error.name = 'ValidationError';
-      throw error;
+      NotFoundError('Email not found');
     }
     return userByEmail as unknown as User;
   }
