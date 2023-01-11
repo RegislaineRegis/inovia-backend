@@ -36,3 +36,14 @@ Back-end:
 ## Modeling (DER) 
 
 ![inovia-backend drawio](https://user-images.githubusercontent.com/94489726/210282622-1ee56331-0752-4a50-8528-1067e0d0f4a9.png)
+
+## A solução a ser desenvolvida consiste em um sistema de vendas web conforme especificado abaixo:
+
+## Escopo do Projeto
+
+- [Requisitos do projeto](#requisitos-do-projeto)
+
+      `Requisitos`
+    
+    - [x] [1. Os usuários devem se autenticar utilizando JWT e devem permanecer conectados por no máximo 15 minutos. Após esse tempo, o usuário precisa renovar o login ou perderá acesso ao sistema](#1-Os-usuários-devem-se-autenticar-utilizando-JWT-e-devem-permanecer-conectados-por-no-máximo-15-minutos-Após-esse-tempo-o-usuário-precisa-renovar-o-login-ou-perderá-acesso-ao-sistema)
+    
