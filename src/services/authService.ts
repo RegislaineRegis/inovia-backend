@@ -1,4 +1,4 @@
-import { Login, User } from '$/domain';
+import { User, Login } from '$/domain';
 import { UnauthorizedError } from '$/middlewares/errors';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -14,16 +14,21 @@ export const authService = {
     return verifyPass;
   },
 
-  async createToke(user: User, timeAccessToken: string, timeRefreshToken: string): Promise<Login.Output> {
-    const { password: _, ...userNoPass } = user;
-    const accessToken = jwt.sign({ data: { userId: user.id } }, jwtSecret, {
+  async createToke(user: User, timeAccessToken: string, timeRefreshToken: string): Promise<Login.Token> {
+    const accessToken = jwt.sign({ data: user }, jwtSecret, {
       expiresIn: timeAccessToken,
       algorithm: 'HS256'
     });
-    const refreshToken = jwt.sign({ data: { userId: user.id } }, jwtSecret, {
+    const refreshToken = jwt.sign({ data: user }, jwtSecret, {
       expiresIn: timeRefreshToken,
       algorithm: 'HS256'
     });
-   return { ...userNoPass, accessToken, refreshToken };
+    const userToken = {
+      accessToken,
+      refreshToken,
+      tokenType: 'Bearer',
+      expiresIn: 2400
+    };
+    return userToken as any as Login.Token;
   }
 };

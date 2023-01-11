@@ -1,5 +1,5 @@
 import { User } from '$/domain';
-import { NotFoundError } from '$/middlewares/errors';
+import { UnauthorizedError } from '$/middlewares/errors';
 import { models } from '$/models/sequelize';
 
 export const userService = {
@@ -8,7 +8,7 @@ export const userService = {
       { where: { email }, raw: true }
     );
     if (!userByEmail) {
-      NotFoundError('Email not found');
+     UnauthorizedError('Email not found');
     }
     return userByEmail as unknown as User;
   }
