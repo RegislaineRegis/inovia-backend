@@ -4,11 +4,11 @@
     "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
     "containerId": "999c78e4-eeb0-42ce-9597-083a8b9b4bd5",
     "name": "authRoutes",
-    "url": "localhost:3001/auth/login",
+    "url": "localhost:3001/api/auth/login",
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-01-09T20:49:47.323Z",
-    "modified": "2023-01-12T21:39:27.769Z",
+    "modified": "2023-01-12T21:48:57.457Z",
     "headers": [
       {
         "name": "Authorization",
