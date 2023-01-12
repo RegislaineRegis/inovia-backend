@@ -1,4 +1,4 @@
-import { User, Login } from '$/domain';
+import { Login, User } from '$/domain';
 import { UnauthorizedError } from '$/middlewares/errors';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -35,4 +35,5 @@ export const authService = {
     };
     return userToken as any as Login.Output;
   }
+
 };

@@ -4,18 +4,37 @@
     "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
     "containerId": "999c78e4-eeb0-42ce-9597-083a8b9b4bd5",
     "name": "authRoutes",
-    "url": "localhost:3001/auth",
+    "url": "localhost:3001/auth/login",
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-01-09T20:49:47.323Z",
-    "modified": "2023-01-11T00:47:24.487Z",
-    "headers": [],
+    "modified": "2023-01-12T21:39:27.769Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIn0sImlhdCI6MTY3MzU1MDg3MCwiZXhwIjoxNjczNTUzMjcwfQ.74pVjbIpUM6oMIl_DaqsiZ8muZ_3UWazPpFq2QpMbAc"
+      }
+    ],
     "params": [],
     "body": {
       "type": "json",
       "raw": "{\n  \"email\": \"teste@email.com\",\n  \"password\": \"User123*\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "890fbe23-7af2-4238-97ef-0610ffc75ee0",
+    "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
+    "containerId": "999c78e4-eeb0-42ce-9597-083a8b9b4bd5",
+    "name": "postRefresh",
+    "url": "localhost:3001/refresh",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-01-12T20:42:42.449Z",
+    "modified": "2023-01-12T20:43:05.384Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
