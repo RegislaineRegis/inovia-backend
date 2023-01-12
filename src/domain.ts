@@ -4,12 +4,6 @@ export namespace Login {
     password: string,
   };
   export type Output = {
-    id: number,
-    email: string,
-    accessToken: string,
-    refreshToken: string,
-  };
-  export type Token = {
     accessToken: string,
     refreshToken: string,
     tokenType: string,
@@ -21,4 +15,15 @@ export type User = {
   email: string,
   password: string,
 };
-
+/*
+export type Customer = {
+  id: number,
+  user_id: number,
+  name: string,
+  address: string,
+  phone: string,
+  email: string,
+  birthDate: Date,
+  profilePhoto: string,
+};
+*/
