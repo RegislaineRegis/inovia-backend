@@ -3,8 +3,10 @@ import Joi from 'joi';
 
 
 export const authValidators = {
-  loginSchema: Joi.object<Login.Input>({
+  login: Joi.object<Login.Input>({
       email: Joi.string().email().required(),
       password: Joi.string().min(6).required()
-  })
+  }),
+
+  refresh: Joi.string().required().pattern(/Bearer\s.+/)
 };

@@ -4,15 +4,15 @@
     "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
     "containerId": "999c78e4-eeb0-42ce-9597-083a8b9b4bd5",
     "name": "authRoutes",
-    "url": "localhost:3001/auth/login",
+    "url": "localhost:3001/api/auth/login",
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-01-09T20:49:47.323Z",
-    "modified": "2023-01-12T21:39:27.769Z",
+    "modified": "2023-01-13T00:05:39.520Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIn0sImlhdCI6MTY3MzU1MDg3MCwiZXhwIjoxNjczNTUzMjcwfQ.74pVjbIpUM6oMIl_DaqsiZ8muZ_3UWazPpFq2QpMbAc"
+        "value": ""
       }
     ],
     "params": [],
@@ -28,12 +28,17 @@
     "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
     "containerId": "999c78e4-eeb0-42ce-9597-083a8b9b4bd5",
     "name": "postRefresh",
-    "url": "localhost:3001/refresh",
+    "url": "localhost:3001/api/auth/refresh",
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-01-12T20:42:42.449Z",
-    "modified": "2023-01-12T20:43:05.384Z",
-    "headers": [],
+    "modified": "2023-01-13T01:40:03.033Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": ""
+      }
+    ],
     "params": [],
     "tests": []
   }
