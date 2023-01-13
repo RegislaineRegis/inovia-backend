@@ -3,6 +3,7 @@ import { UnauthorizedError } from '$/middlewares/errors';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
+
 const jwtSecret = process.env.JWT_SECRET || '123456';
 
 export const authService = {
@@ -35,5 +36,4 @@ export const authService = {
     };
     return userToken as any as Login.Output;
   }
-
 };
