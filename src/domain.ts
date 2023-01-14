@@ -15,7 +15,6 @@ export type User = {
   email: string,
   password: string,
 };
-/*
 export type Customer = {
   id: number,
   user_id: number,
@@ -26,4 +25,4 @@ export type Customer = {
   birthDate: Date,
   profilePhoto: string,
 };
-*/
+
