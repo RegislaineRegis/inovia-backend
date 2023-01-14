@@ -27,8 +27,6 @@ export const authService = {
       algorithm: 'HS256'
     });
     const userToken = {
-      id: user.id,
-      email: user.email,
       accessToken,
       refreshToken,
       tokenType: 'Bearer',

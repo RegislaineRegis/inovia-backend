@@ -17,12 +17,13 @@ export const authController = {
     return tokenUser as any as Login.Output;
   },
 
-  async verifyRefresh(token: string): Promise<Login.Input> {
+  async verifyRefresh(token: string): Promise<Login.Output> {
     try {
       const decoded = jwt.verify(token, jwtSecret);
       const user = await userService.getByEmail(decoded.data.email);
       if (!user) NotFoundError('Error looking up token user');
-      return user;
+      const tokenUser = await authService.createToke(user, '15m', '40m');
+      return tokenUser;
     } catch (err) {
       return err;
     }
