@@ -41,5 +41,19 @@
     ],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "fd7c8e7f-82de-4935-8675-33c2aa52e10b",
+    "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
+    "containerId": "e77970dc-9f69-41bb-9d4a-de0f3850ab09",
+    "name": "getAllCustomer",
+    "url": "localhost:3001/api/customer",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-01-14T02:14:11.202Z",
+    "modified": "2023-01-14T02:17:17.889Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
