@@ -10,7 +10,8 @@
       ],
       "runtimeExecutable": "npm",
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**",
+        "node_modules/**"
       ],
       "type": "node"
     },

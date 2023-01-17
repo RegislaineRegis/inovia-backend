@@ -6,7 +6,7 @@ CREATE TABLE "user" (
 
 CREATE TABLE "customer" (
   "id" BIGSERIAL NOT NULL PRIMARY KEY,
-  "user_id" BIGINT REFERENCES "user" ("id"),
+  "user_id" BIGINT NULL REFERENCES "user" ("id"),
   "name" VARCHAR(120) NOT NULL,
   "address" VARCHAR(200) NOT NULL,
   "phone" VARCHAR(30) NOT NULL,
