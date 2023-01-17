@@ -15,14 +15,25 @@ export type User = {
   email: string,
   password: string,
 };
-export type Customer = {
-  id: number,
-  user_id: number,
-  name: string,
-  address: string,
-  phone: string,
-  email: string,
-  birthDate: Date,
-  profilePhoto: string,
-};
+export namespace Customer {
+  export type Input = {
+    name: string,
+    address: string,
+    phone: string,
+    email: string,
+    birthDate: Date,
+    profilePhoto: string,
+  };
+  export type Output = {
+    id: number,
+    user_id: number,
+    name: string,
+    address: string,
+    phone: string,
+    email: string,
+    birthDate: Date,
+    profilePhoto: string,
+  };
+}
+
 
