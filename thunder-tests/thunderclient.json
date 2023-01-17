@@ -51,9 +51,33 @@
     "method": "GET",
     "sortNum": 40000,
     "created": "2023-01-14T02:14:11.202Z",
-    "modified": "2023-01-14T02:17:17.889Z",
+    "modified": "2023-01-17T14:07:50.804Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIn0sImlhdCI6MTY3Mzk2NDQyMSwiZXhwIjoxNjczOTY2ODIxfQ.gKUnmLdybKM99sMVXXu3hrG0tAQDF_Aoa8uD0FPMxrU"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "679947d1-5f4e-40da-a935-317a9e642fd1",
+    "colId": "c894f24e-b5bb-4ed1-b716-d93ae93753d8",
+    "containerId": "e77970dc-9f69-41bb-9d4a-de0f3850ab09",
+    "name": "postAddCustomer",
+    "url": "localhost:3001/api/customer",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-01-14T03:31:21.537Z",
+    "modified": "2023-01-17T13:36:39.656Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"id\": \"3\",\n  \"user_id\": \"\",\n  \"name\": \"Regislaine Regis\",\n  \"address\":\"Av dos testes\",\n  \"phone\": \"19 9999-6356\",\n  \"email\": \"teste1@gmail.com\",\n  \"birthDate\": \"02-11-1980\",\n  \"profilePhoto\": \"regislaine.jpg\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
